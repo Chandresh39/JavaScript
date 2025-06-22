@@ -5,17 +5,13 @@ This repository contains practical **JavaScript projects** that help in learning
 Each folder in this repo is a self-contained mini project with clean code and simple UI — perfect for beginners to intermediate learners.
 
 ---
+## 📁 Project Folders
 
-## 📁 Project List
+Each folder below contains a working JavaScript project. Click to open:
 
-| Project Name       | Description                                      | Link   |
-|--------------------|--------------------------------------------------|--------|
-| 📝 To-Do List       | Create and delete tasks.          | cd to-do-list    |
-<!--| 🧮 Calculator        | Basic calculator with +, −, ×, ÷ operations.     |
-| ✅ Form Validator    | Validate input fields (name, email, password).   |
-| 🎯 Number Guessing  | Simple game to guess a random number.            |
-| ⏱️ Stopwatch        | Start, stop, and reset timer.                    |
-| 🌡️ Weather App     | Fetch real-time weather using an API.            |
-| 📅 BMI Calculator    | Calculate Body Mass Index from user input.       |
-| 💡 Light/Dark Toggle| Theme switcher using JavaScript.                |
+- [To-Do List](./to-do-list) – Task management with add/delete/check features.
+<!--
+- [Calculator](./calculator) – Basic calculator using JavaScript.
+- [Form Validator](./form-validator) – Form validation with error messages.
 -->
+---
