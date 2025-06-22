@@ -8,9 +8,9 @@ Each folder in this repo is a self-contained mini project with clean code and si
 
 ## 📁 Project List
 
-| Project Name       | Description                                      |
-|--------------------|--------------------------------------------------|
-| 📝 To-Do List       | Create and delete tasks.          |
+| Project Name       | Description                                      | Link   |
+|--------------------|--------------------------------------------------|--------|
+| 📝 To-Do List       | Create and delete tasks.          | cd to-do-list    |
 <!--| 🧮 Calculator        | Basic calculator with +, −, ×, ÷ operations.     |
 | ✅ Form Validator    | Validate input fields (name, email, password).   |
 | 🎯 Number Guessing  | Simple game to guess a random number.            |
