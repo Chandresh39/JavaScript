@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <div class="main">
+            <h1>To Do List</h1>
+
+            <div class="container">
+                <input type="text" class="task-title" placeholder="Enter Tiltle Your Task...">
+                <input type="date" class="date">
+                <select class="priority">
+                    <option value="">-</option>
+                    <option value="Low">Low</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="High">High</option>
+                </select>
+                <button class="add-task">Add</button>
+            </div>
+
+            <div class="display">
+                <table class="list-task">
+                    <thead>
+                        <!-- <td>Sr.No.</td> -->
+                        <td>Task Name</td>
+                        <td>Deadline</td>
+                        <td>Priority</td>
+                        <td>Action</td>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
