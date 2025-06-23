@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <div class="main">
+            <h1>BMI Calculator</h1>
+            <input type="text" class="height" placeholder="Enter your height">
+            <select class="convert">
+                <option value="cm">CM</option>
+                <option value="meter">METER</option>
+                <!-- <option value="inch">inch</option> -->
+            </select> <br>
+            <input type="text" class="weight" placeholder="Enter your weight">
+            <span class="kg-label">KG</span> <br>
+            <button>Calculate</button>
+        </div>
+        <div class="display">
+            <div class="result"></div> <br>
+            <h3>Note:</h3>
+            <ul>
+                <li>if BMI count under 25 is TOO LOW</li>
+                <li>if BMI count above 70 is TOO HIGHT</li>
+                <li>if BMI count between 25 to 70 Normal</li>
+            </ul>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
