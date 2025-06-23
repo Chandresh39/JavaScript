@@ -10,6 +10,7 @@ Each folder in this repo is a self-contained mini project with clean code and si
 Each folder below contains a working JavaScript project. Click to open:
 
 - [To-Do List](./to-do-list) – Task management with add/delete/check features.
+- [BMI-Calculator](./bmi-calculator) – Calculator BMI count using JavaScript.
 <!--
 - [Calculator](./calculator) – Basic calculator using JavaScript.
 - [Form Validator](./form-validator) – Form validation with error messages.
