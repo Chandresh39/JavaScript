@@ -15,4 +15,5 @@ Each folder below contains a working JavaScript project. Click to open:
 - [Calculator](./calculator) – Basic calculator using JavaScript.
 - [Form Validator](./form-validator) – Form validation with error messages.
 -->
+- [BG-Color-Changer](./bg-color-changer) - Change Backgroung color every seconds using `setInterval()`
 ---
