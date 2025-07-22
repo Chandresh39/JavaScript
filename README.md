@@ -12,6 +12,7 @@ Each folder below contains a working JavaScript project. Click to open:
 - [To-Do List](./to-do-list) – Task management with add/delete/check features.
 - [BMI-Calculator](./bmi-calculator) – Calculator BMI count using JavaScript.
 - [BG-Color-Changer](./bg-color-changer) - Change Backgroung color every seconds using `setInterval()`.
+- [Stone-Paper-Scissor Game](./stone-paper-scissor) - Genrate random computer choices using `Math.random()`.
 <!--
 - [Calculator](./calculator) – Basic calculator using JavaScript.
 - [Form Validator](./form-validator) – Form validation with error messages.
