@@ -1,0 +1,108 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.score {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.score p:first-child {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffea00;
+}
+
+.result-display {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 20px 0;
+}
+
+.result-display p {
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    min-width: 120px;
+}
+
+.msg-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#msg {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.choice {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.choice:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+}
+
+.choice img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    pointer-events: none; /* so click works on div */
+    transition: transform 0.3s;
+}
+
+.choice:hover img {
+    transform: scale(1.2);
+}
