@@ -1,6 +1,6 @@
 let userScore = 0;
 let compScore = 0;
-
+const reset = document.querySelector('#reset');
 const choices = document.querySelectorAll('.choice');
 
 choices.forEach((choice) => {
@@ -9,7 +9,8 @@ choices.forEach((choice) => {
         const compChoice = getComputerChoice();
         const result = determineWinner(userChoice, compChoice);
         
-        updateScores(result);
+        reset.removeAttribute('hidden'); // Enable reset button after a choice is made
+        updates(result);
         displayResult(userChoice, compChoice);
         msgContainer(result);
     });
@@ -23,7 +24,7 @@ function getComputerChoice() {
 
 function determineWinner(userChoice, compChoice) {
     if (userChoice === compChoice) {
-        return 'draw';
+        return;
     }
     if (
         (userChoice === 'rock' && compChoice === 'scissor') ||
@@ -35,13 +36,22 @@ function determineWinner(userChoice, compChoice) {
     return 'computer';
 }
 
-function updateScores(result) {
+function updates(result) {
+    const msgContainer = document.querySelector('.msg-container');
+    
     if (result === 'user') {
         userScore++;
         document.querySelector('#user-score').textContent = userScore;
+        msgContainer.textContent = 'You win!';
+        msgContainer.style.color = 'green';
     } else if (result === 'computer') {
         compScore++;
         document.querySelector('#comp-score').textContent = compScore;
+        msgContainer.textContent = 'Computer wins!';
+        msgContainer.style.color = 'red';
+    } else {
+        msgContainer.textContent = 'It\'s a draw!';
+        msgContainer.style.color = 'black';
     }
 }
 
@@ -53,13 +63,13 @@ function displayResult(userChoice, compChoice) {
     comp.textContent = `Computer chose: ${compChoice}`;
 }
 
-function msgContainer(result) {
-    const msgContainer = document.querySelector('.msg-container');
-    if (result === 'user') {
-        msgContainer.textContent = 'You win!';
-    } else if (result === 'computer') {
-        msgContainer.textContent = 'Computer wins!';
-    } else {
-        msgContainer.textContent = 'It\'s a draw!';
-    }
-}   
+reset.addEventListener('click', () => {
+    userScore = 0;
+    compScore = 0;
+    document.querySelector('#user-score').textContent = userScore;
+    document.querySelector('#comp-score').textContent = compScore;
+    document.querySelector('.msg-container').textContent = '';
+    document.querySelector('#user-choice').textContent = '';
+    document.querySelector('#comp-choice').textContent = '';
+    reset.setAttribute('hidden',true); // Hide reset button after resetting the game
+});
