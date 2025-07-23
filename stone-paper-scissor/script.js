@@ -3,25 +3,28 @@ let compScore = 0;
 const reset = document.querySelector('#reset');
 const choices = document.querySelectorAll('.choice');
 
+// select user choice
 choices.forEach((choice) => {
     choice.addEventListener('click', () => {
         const userChoice = choice.getAttribute('data-choice');
         const compChoice = getComputerChoice();
         const result = determineWinner(userChoice, compChoice);
         
-        reset.removeAttribute('hidden'); // Enable reset button after a choice is made
+        reset.removeAttribute('hidden'); // Enable reset button 
         updates(result);
         displayResult(userChoice, compChoice);
         msgContainer(result);
     });
 });
 
+// get computer choice
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissor'];
     const randomIndex = Math.floor(Math.random() * 3);
     return choices[randomIndex];
 }
 
+// get winner
 function determineWinner(userChoice, compChoice) {
     if (userChoice === compChoice) {
         return;
@@ -36,6 +39,7 @@ function determineWinner(userChoice, compChoice) {
     return 'computer';
 }
 
+// update score board and msg
 function updates(result) {
     const msgContainer = document.querySelector('.msg-container');
     
@@ -55,6 +59,7 @@ function updates(result) {
     }
 }
 
+// dispaly choice both sides
 function displayResult(userChoice, compChoice) {
     const user = document.querySelector('#user-choice');
     const comp = document.querySelector('#comp-choice');
@@ -63,6 +68,7 @@ function displayResult(userChoice, compChoice) {
     comp.textContent = `Computer chose: ${compChoice}`;
 }
 
+// reset game
 reset.addEventListener('click', () => {
     userScore = 0;
     compScore = 0;
@@ -71,5 +77,5 @@ reset.addEventListener('click', () => {
     document.querySelector('.msg-container').textContent = '';
     document.querySelector('#user-choice').textContent = '';
     document.querySelector('#comp-choice').textContent = '';
-    reset.setAttribute('hidden',true); // Hide reset button after resetting the game
+    reset.setAttribute('hidden',true); // Hide reset button 
 });
